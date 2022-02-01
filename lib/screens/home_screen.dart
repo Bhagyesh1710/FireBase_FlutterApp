@@ -5,6 +5,7 @@ import 'package:flutter_auth/imageUpload/image_upload.dart';
 import 'package:flutter_auth/imageUpload/show_images.dart';
 import 'package:flutter_auth/model/user_model.dart';
 import 'package:flutter_auth/screens/login_screen.dart';
+import 'package:flutter_auth/screens/push_notification.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -76,6 +77,10 @@ class _HomeScreenState extends State<HomeScreen> {
               ElevatedButton(onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>ShowUpload(userID: this.loggedInUser.uid,),),);
               }, child: Text('Show Images')),
+
+              ElevatedButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>PushNote(),),);
+              }, child: Text('Push Notification')),
 
             ],
           ),
